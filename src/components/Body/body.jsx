@@ -10,7 +10,7 @@ const Body = () => {
     fetch("https://official-joke-api.appspot.com/random_joke").then(
       (response) => response.json())
       .then((data) => {
-        setJoke(data.setup + "..." + data.punchline);
+        setJoke("Random Joke for no reason:  " + data.setup + " ... " + data.punchline);
       });
 
     e.target.reset();
@@ -21,12 +21,18 @@ const Body = () => {
       <h2> Enter prompt below</h2>
         
       <div>
-      
-      {joke}
         <form Ref={form} onSubmit={getJoke}>
           <input type='text' name='prompt' placeholder='Enter Prompt here' required/>
           <button type='submit' className='btn'>Generate</button>
         </form>
+
+        <div className="image_box">
+
+        </div>
+        
+        <div className="joke_container">
+          {joke}
+        </div>
         
       </div>
     </section>

@@ -13,3 +13,19 @@ input {
     resize: none;
     color: var(--color-text);
 }
+
+.image_box {
+    background: tan;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 4px solid black;
+}
+
+.joke_container {
+    margin-top: 2rem;
+    margin-left: 0.7rem;
+    margin-right: 2rem;
+}
