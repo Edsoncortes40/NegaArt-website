@@ -1,0 +1,33 @@
+footer {
+    background: black;
+    color: aliceblue;
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer > h1 {
+    font-size: 1.5rem;
+}
+.footer_socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer_socials a {
+    font-size: 2.5rem;
+    padding: 0.8rem;
+    display: flex;
+    color: aliceblue;
+}
+
+.footer_socials a:hover {
+    color: palegoldenrod;
+}
+
+.footer_copyright {
+    margin-bottom: 2.5rem;
+}
