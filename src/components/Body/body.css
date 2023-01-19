@@ -22,10 +22,14 @@ input {
     margin-left: 2rem;
     margin-right: 2rem;
     border: 4px solid black;
+    text-align: center;
 }
 
 .joke_container {
-    margin-top: 2rem;
-    margin-left: 0.7rem;
-    margin-right: 2rem;
+    flex-wrap: wrap;
 }
+
+.unsplash_image {
+    max-width: 30%;
+    border: 5px solid black;
+  }
