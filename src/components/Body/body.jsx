@@ -9,7 +9,6 @@ const Body = () => {
   const buttonSubmit = (e) => {
     e.preventDefault();
     getJoke();
-    getRandomImage();
     getAIArtResponse();
 
     e.target.reset();
@@ -61,7 +60,7 @@ const Body = () => {
         </form>
 
         <div className="image_box">
-          <img className="unsplash_image" alt="" src={image}/>
+          <img className="unsplash_image" alt="" src={apiData.imageURL}/>
           <p id='original'>Original Prompt: {apiData.original_prompt}</p>
           <p id='inverted'>Inversed Prompt: {apiData.inverted_prompt}</p>
         </div>
