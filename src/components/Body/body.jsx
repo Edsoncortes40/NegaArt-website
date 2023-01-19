@@ -4,11 +4,14 @@ import './body.css'
 const Body = () => {
   const [joke, setJoke] = useState("");
   const [image, setImage] = useState("");
+  const [apiData, setData] = useState("");
   const form = useRef();
   const buttonSubmit = (e) => {
     e.preventDefault();
     getJoke();
     getRandomImage();
+    getAIArtResponse();
+
     e.target.reset();
 
   }
@@ -22,13 +25,29 @@ const Body = () => {
   }
 
   const getRandomImage = () => {
-    const endpoint = "https://api.unsplash.com/photos/random/?client_id=XxGyPIroWhkJGrsv-0rEdcWEKTxCBN9pzg3YK_84RsA";
-    fetch(endpoint).then(
+    const rand_endpoint = "https://api.unsplash.com/photos/random/?client_id=XxGyPIroWhkJGrsv-0rEdcWEKTxCBN9pzg3YK_84RsA";
+    fetch(rand_endpoint).then(
       (response) => response.json()
       ).then((data) => {
         setImage(data.urls.regular)
         console.log(data.urls.regular)
       });
+  }
+
+  const getAIArtResponse = () => {
+    var api_endpoint = "http://127.0.0.1:8000/generate_image/"
+    var userPrompt = document.getElementById('prompt').value
+    api_endpoint = api_endpoint + userPrompt
+
+    console.log(api_endpoint)
+    fetch(api_endpoint).then(
+      (response) => response.json()
+    ).then((data) => {
+      console.log(data)
+      setData(data)
+    }
+
+    )
   }
 
   return (
@@ -37,13 +56,16 @@ const Body = () => {
         
       <div>
         <form Ref={form} onSubmit={buttonSubmit}>
-          <input type='text' name='prompt' placeholder='Enter Prompt here' required/>
+          <input type='text' id='prompt' placeholder='Enter Prompt here' required/>
           <button type='submit' className='btn'>Generate</button>
         </form>
 
         <div className="image_box">
           <img className="unsplash_image" alt="" src={image}/>
+          <p id='original'>Original Prompt: {apiData.original_prompt}</p>
+          <p id='inverted'>Inversed Prompt: {apiData.inverted_prompt}</p>
         </div>
+
 
         <div className="joke_container">
           {joke}

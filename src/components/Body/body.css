@@ -25,6 +25,11 @@ input {
     text-align: center;
 }
 
+.image_box > p {
+    color: black;
+    font-size: 1rem;
+}
+
 .joke_container {
     flex-wrap: wrap;
 }
