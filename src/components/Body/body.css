@@ -4,10 +4,17 @@ form {
     gap: 1.2rem;
 }
 
+.body > h2 {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 input {
-    width: 100%;
-    padding: 1.5rem;
+    width: 95%;
+    padding: 1.4rem;
     border-radius: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     background: transparent;
     border: 2px solid var(--color-text);
     resize: none;
@@ -31,6 +38,8 @@ input {
 }
 
 .joke_container {
+    margin-top: 1.2rem;
+    margin-left: 1rem;
     flex-wrap: wrap;
 }
 
