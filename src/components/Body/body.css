@@ -6,6 +6,11 @@ form {
 
 .body > h2 {
     margin-left: 2rem;
+    margin-bottom: 0rem;
+}
+
+.body > p {
+    margin-left: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -22,7 +27,7 @@ input {
 }
 
 .image_box {
-    background: tan;
+    background: wheat;
     padding: 2rem;
     border-radius: 0.6rem;
     margin-top: 2rem;
