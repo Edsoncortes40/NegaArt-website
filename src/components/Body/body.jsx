@@ -52,6 +52,10 @@ const Body = () => {
   return (
     <section className='body'>
       <h2> Enter prompt below</h2>
+      <p>
+        For example, submitting the prompt: "A big white dog" will inverse the prompt 
+        to "A small black dog" and generate and AI image of that inverted prompt
+      </p>
         
       <div>
         <form Ref={form} onSubmit={buttonSubmit}>

@@ -4,7 +4,7 @@ import './header.css'
 const header = () => {
   return (
     <header>
-        <h1>Opposite AI Generator</h1>
+        <h1>AI Image Negator</h1>
         <h3>Enter a prompt and the generator will show you an image of the opppsite!</h3>
     </header>
   )
