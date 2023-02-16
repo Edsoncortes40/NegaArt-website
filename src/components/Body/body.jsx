@@ -34,7 +34,7 @@ const Body = () => {
   }
 
   const getAIArtResponse = () => {
-    var api_endpoint = "http://127.0.0.1:8000/generate_image/"
+    var api_endpoint = "http://18.220.18.192/generate_image/"
     var userPrompt = document.getElementById('prompt').value
     api_endpoint = api_endpoint + userPrompt
 
